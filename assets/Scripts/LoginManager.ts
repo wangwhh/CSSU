@@ -1,22 +1,12 @@
-import { _decorator, Component, EditBox, EventHandler, Node } from 'cc';
+import { _decorator, Component, director, EditBox, EventHandler, Node, tween, Vec3 } from 'cc';
 const { ccclass, property } = _decorator;
 
 @ccclass('loginManager')
 export class loginManager extends Component {
-    onLoad() {
-        // const editboxEventHandler = new EventHandler();
-        // editboxEventHandler.target = this.node; // 这个 node 节点是你的事件处理代码组件所属的节点
-        // editboxEventHandler.component = 'loginManager';
-        // editboxEventHandler.handler = 'onEditDidEnded';
-        // editboxEventHandler.customEventData = 'foobar';
-
-        // const editbox = this.node.getComponent(EditBox);
-        // editbox.editingDidEnded.push(editboxEventHandler);
-        // editbox.editingReturn.push(editboxEventHandler);
-    }
-
+    userInput:string;
     start() {
-
+        this.node.getChildByName('login').getChildByName('userName').active = false;
+        this.node.getChildByName('notRobot').active = false;
     }
 
     update(deltaTime: number) {
@@ -24,17 +14,32 @@ export class loginManager extends Component {
     }
 
     onButtonClicked() {    
-        console.log('buttonClicked')
+        if(this.userInput == '用户名'){
+            this.node.getChildByName('login').active = false;
+            this.node.getChildByName('notRobot').active = true;
+        }else{
+            tween(this.node.getChildByName('login').getChildByName('Button'))
+            .by(0.05, {
+                position: new Vec3(-5, 0, 0)
+            })
+            .by(0.05, {
+                position: new Vec3(8, 0, 0)
+            })
+            .by(0.03, {
+                position: new Vec3(-3, 0, 0)
+            })
+            .start();
+            this.node.getChildByName('login').getChildByName('userName').active = true;
+        }
     }
 
     onEditDidEnded(editbox, customEventData) {
-        console.log('onEditDidEnded', editbox._string)
+        this.userInput = editbox._string;
     }
 
-    onEditingReturn(editbox, customEventData) {
-        console.log('onEditingReturn', editbox._string)
+    onNotRobotClicked() {
+        director.loadScene("selectCat");
     }
-
 }
 
 

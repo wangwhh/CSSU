@@ -18,7 +18,9 @@ export class hrdController extends Component {
         new Vec3(214,   -214,   0)
     ];
     start() {
-        this.cur_pics = this.getRandomData();
+        do{
+            this.cur_pics = this.getRandomData();
+        }while(!this.hasEvenInversions(this.cur_pics));
         this.adjustPos();
     }
 
@@ -28,22 +30,34 @@ export class hrdController extends Component {
 
     adjustPos() {
         for(let i = 0; i < 8; i++){
-            let child = this.node.getChildByName(this.cur_pics[i].toString())
+            let child = this.node.getChildByName('squares').getChildByName(this.cur_pics[i].toString())
             child.setPosition(this.pos[i]);
         }
     }
 
-    // 生成随机数组
+    // 生成随机数组，偶数个逆序数对
     getRandomData() {
         let random_arr = [];
         while (random_arr.length < 8) {
-        let random = Math.floor(Math.random() * 8) + 1;
-        if (random_arr.indexOf(random) == -1) {
-            random_arr.push(random);
-        }
+            let random = Math.floor(Math.random() * 8) + 1;
+            if (random_arr.indexOf(random) == -1) {
+                random_arr.push(random);
+            }
         }
         random_arr.push(0);   // 添加0作为最后的空白位
         return random_arr;
+    }
+
+    hasEvenInversions(arr: number[]): boolean {
+        let inversions = 0;
+        for (let i = 0; i < arr.length - 1; i++) {
+          for (let j = i + 1; j < arr.length; j++) {
+            if (arr[i] > arr[j]) {
+              inversions++;
+            }
+          }
+        }
+        return inversions % 2 === 0;
     }
 
     move(num:number) {
@@ -89,6 +103,25 @@ export class hrdController extends Component {
         }
     }
 
+    onCheckBtnClicked(){
+        console.log(this.node)
+        if(this.cur_pics.toString() == this.finish_pics.toString()){
+            console.log('ok!');
+        }else{
+            console.log('no')
+            tween(this.node.getChildByName('checkButton'))
+            .by(0.05, {
+                position: new Vec3(-5, 0, 0)
+            })
+            .by(0.05, {
+                position: new Vec3(8, 0, 0)
+            })
+            .by(0.03, {
+                position: new Vec3(-3, 0, 0)
+            })
+            .start();
+        }
+    }
 
 }
 

@@ -1,11 +1,12 @@
-import { _decorator, Component, Node, tween, Vec3 } from 'cc';
+import { _decorator, Component, director, Node, tween, Vec3 } from 'cc';
 const { ccclass, property } = _decorator;
 
 @ccclass('selectCat')
 export class selectCat extends Component {
     buttonClicked:number[] = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+    finishClicked:number[] = [0, 0, 0, 0, 0, 1, 1, 0, 0];
     start() {
-
+        
     }
 
     update(deltaTime: number) {
@@ -30,6 +31,24 @@ export class selectCat extends Component {
             .start();
         }
     }
+    onCheckBtnClicked() {
+        if(this.buttonClicked.toString() == this.finishClicked.toString()){
+            director.loadScene("HuaRongDao")
+        }else{
+            tween(this.node.getChildByName('checkButton'))
+            .by(0.05, {
+                position: new Vec3(-5, 0, 0)
+            })
+            .by(0.05, {
+                position: new Vec3(8, 0, 0)
+            })
+            .by(0.03, {
+                position: new Vec3(-3, 0, 0)
+            })
+            .start();
+        }
+    }
+    
 }
 
 

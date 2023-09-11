@@ -104,11 +104,9 @@ export class hrdController extends Component {
     }
 
     onCheckBtnClicked(){
-        console.log(this.node)
         if(this.cur_pics.toString() == this.finish_pics.toString()){
             console.log('ok!');
         }else{
-            console.log('no')
             tween(this.node.getChildByName('checkButton'))
             .by(0.05, {
                 position: new Vec3(-5, 0, 0)

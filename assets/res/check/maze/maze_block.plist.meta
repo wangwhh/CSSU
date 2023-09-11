@@ -1,0 +1,155 @@
+{
+  "ver": "1.0.8",
+  "importer": "sprite-atlas",
+  "imported": true,
+  "uuid": "6c0f1b17-59bb-4b7d-9193-95ea4d736cdd",
+  "files": [
+    ".json"
+  ],
+  "subMetas": {
+    "38172": {
+      "importer": "sprite-frame",
+      "uuid": "6c0f1b17-59bb-4b7d-9193-95ea4d736cdd@38172",
+      "displayName": "",
+      "id": "38172",
+      "name": "box",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 0,
+        "trimY": 0,
+        "width": 60,
+        "height": 60,
+        "rawWidth": 60,
+        "rawHeight": 60,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "pixelsToUnit": 100,
+        "pivotX": 0.5,
+        "pivotY": 0.5,
+        "meshType": 0,
+        "vertices": {
+          "rawPosition": [],
+          "indexes": [],
+          "uv": [],
+          "nuv": [],
+          "minPos": [],
+          "maxPos": []
+        },
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "a8e78917-4c94-4be7-abe6-fa08a41c958a@6c48a",
+        "atlasUuid": "6c0f1b17-59bb-4b7d-9193-95ea4d736cdd"
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "0ec24": {
+      "importer": "sprite-frame",
+      "uuid": "6c0f1b17-59bb-4b7d-9193-95ea4d736cdd@0ec24",
+      "displayName": "",
+      "id": "0ec24",
+      "name": "grass",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 60,
+        "trimY": 0,
+        "width": 60,
+        "height": 60,
+        "rawWidth": 60,
+        "rawHeight": 60,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "pixelsToUnit": 100,
+        "pivotX": 0.5,
+        "pivotY": 0.5,
+        "meshType": 0,
+        "vertices": {
+          "rawPosition": [],
+          "indexes": [],
+          "uv": [],
+          "nuv": [],
+          "minPos": [],
+          "maxPos": []
+        },
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "a8e78917-4c94-4be7-abe6-fa08a41c958a@6c48a",
+        "atlasUuid": "6c0f1b17-59bb-4b7d-9193-95ea4d736cdd"
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "e283c": {
+      "importer": "sprite-frame",
+      "uuid": "6c0f1b17-59bb-4b7d-9193-95ea4d736cdd@e283c",
+      "displayName": "",
+      "id": "e283c",
+      "name": "kuai",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 0,
+        "trimY": 60,
+        "width": 94,
+        "height": 94,
+        "rawWidth": 94,
+        "rawHeight": 94,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "pixelsToUnit": 100,
+        "pivotX": 0.5,
+        "pivotY": 0.5,
+        "meshType": 0,
+        "vertices": {
+          "rawPosition": [],
+          "indexes": [],
+          "uv": [],
+          "nuv": [],
+          "minPos": [],
+          "maxPos": []
+        },
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "a8e78917-4c94-4be7-abe6-fa08a41c958a@6c48a",
+        "atlasUuid": "6c0f1b17-59bb-4b7d-9193-95ea4d736cdd"
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "atlasTextureName": "maze_block.png",
+    "format": 3,
+    "uuid": "6c0f1b17-59bb-4b7d-9193-95ea4d736cdd",
+    "textureUuid": "a8e78917-4c94-4be7-abe6-fa08a41c958a@6c48a"
+  }
+}

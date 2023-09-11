@@ -33,7 +33,7 @@ export class selectCat extends Component {
     }
     onCheckBtnClicked() {
         if(this.buttonClicked.toString() == this.finishClicked.toString()){
-            director.loadScene("HuaRongDao")
+            director.loadScene("clickCSSU")
         }else{
             tween(this.node.getChildByName('checkButton'))
             .by(0.05, {

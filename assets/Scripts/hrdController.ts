@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, random, tween, Vec3 } from 'cc';
+import { _decorator, Component, director, Node, random, tween, Vec3 } from 'cc';
 const { ccclass, property } = _decorator;
 
 
@@ -105,7 +105,7 @@ export class hrdController extends Component {
 
     onCheckBtnClicked(){
         if(this.cur_pics.toString() == this.finish_pics.toString()){
-            console.log('ok!');
+            director.loadScene('maze');
         }else{
             tween(this.node.getChildByName('checkButton'))
             .by(0.05, {

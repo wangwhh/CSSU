@@ -1,7 +1,7 @@
 System.register("chunks:///virtual/internal",[],(function(){return{execute:function(){}}}));
 
 (function(r) {
-  r('virtual:///prerequisite-imports/internal', 'chunks:///_virtual/internal'); 
+  r('virtual:///prerequisite-imports/internal', 'chunks:///virtual/internal'); 
 })(function(mid, cid) {
     System.register(mid, [cid], function (_export, _context) {
     return {

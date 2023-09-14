@@ -59,6 +59,7 @@ export class mazeController extends Component {
     onCheckBtnClicked() {
         if(this.maze_x == 8 && this.maze_y == 7){
             //director.loadScene("HuaRongDao")
+            director.loadScene('dialog2')
         }else{
             tween(this.node.getChildByName('checkButton'))
             .by(0.05, {

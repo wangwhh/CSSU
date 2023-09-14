@@ -6,7 +6,6 @@ export class loginManager extends Component {
     userInput:string;
     start() {
         this.node.getChildByName('login').getChildByName('userName').active = false;
-        this.node.getChildByName('notRobot').active = false;
     }
 
     update(deltaTime: number) {
@@ -15,8 +14,7 @@ export class loginManager extends Component {
 
     onButtonClicked() {    
         if(this.userInput == '用户名'){
-            this.node.getChildByName('login').active = false;
-            this.node.getChildByName('notRobot').active = true;
+            director.loadScene('dialog1')
         }else{
             tween(this.node.getChildByName('login').getChildByName('Button'))
             .by(0.05, {
@@ -37,9 +35,6 @@ export class loginManager extends Component {
         this.userInput = editbox._string;
     }
 
-    onNotRobotClicked() {
-        director.loadScene("selectCat");
-    }
 }
 
 

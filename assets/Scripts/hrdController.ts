@@ -120,6 +120,10 @@ export class hrdController extends Component {
             .start();
         }
     }
+    
+    onAbandonClicked() {
+        director.loadScene('dialog3')
+    }
 
 }
 

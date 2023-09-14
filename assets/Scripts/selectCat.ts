@@ -6,11 +6,20 @@ export class selectCat extends Component {
     buttonClicked:number[] = [0, 0, 0, 0, 0, 0, 0, 0, 0];
     finishClicked:number[] = [0, 0, 0, 0, 0, 1, 1, 0, 0];
     start() {
-        
+        this.node.getChildByName('whiteMask').active = false;
+        this.node.getChildByName('checkButton').active = false;
+        this.node.getChildByName('squares').active = false;
     }
 
     update(deltaTime: number) {
         
+    }
+
+    onNotRobotClicked() {
+        this.node.getChildByName('notRobot').active = false;
+        this.node.getChildByName('whiteMask').active = true;
+        this.node.getChildByName('checkButton').active = true;
+        this.node.getChildByName('squares').active = true;
     }
 
     onSquareClicked(button) {

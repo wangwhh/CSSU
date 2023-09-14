@@ -11,7 +11,7 @@ export class clickCSSU extends Component {
         this.node.getChildByName('ikun1').active = false;
         this.node.getChildByName('ikun2').active = false;
         this.node.on(Node.EventType.TOUCH_START, this.onTouchStart, this, true);
-        director.preloadScene("HuaRongDao")
+        director.preloadScene("HuaRongDao");
     }
 
     update(deltaTime: number) {

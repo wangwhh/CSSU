@@ -9,6 +9,7 @@ export class selectCat extends Component {
         this.node.getChildByName('whiteMask').active = false;
         this.node.getChildByName('checkButton').active = false;
         this.node.getChildByName('squares').active = false;
+        director.preloadScene("clickCSSU")
     }
 
     update(deltaTime: number) {

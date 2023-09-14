@@ -15,6 +15,7 @@ export class StartScene extends Component {
         input.on(Input.EventType.TOUCH_START, this.onTouchStart, this);
 
         //input.on(Input.EventType.MOUSE_UP, this.onMouseUp, this);
+        director.preloadScene('loginScene');
     }
 
     update(deltaTime: number) {

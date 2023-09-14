@@ -77,6 +77,7 @@ export class dialogManager extends Component {
         input.on(Input.EventType.TOUCH_START, this.onTouchStart, this);
         if(this.node.name == "Dialog1") {
             this.dialog = this.dialog1;
+            director.preloadScene('selectCat')
         } else if(this.node.name == "Dialog2") {
             this.dialog = this.dialog2;
         } else if(this.node.name == "Dialog3") {

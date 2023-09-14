@@ -24,6 +24,7 @@ export class mazeController extends Component {
         this.piece = this.node.getChildByName('piece');
         this.x0 = this.piece.position.x;
         this.y0 = this.piece.position.y;
+        director.preloadScene('dialog2')
     }
 
     update(deltaTime: number) {

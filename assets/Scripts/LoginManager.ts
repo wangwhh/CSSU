@@ -6,6 +6,7 @@ export class loginManager extends Component {
     userInput:string;
     start() {
         this.node.getChildByName('login').getChildByName('userName').active = false;
+        director.preloadScene('dialog1');
     }
 
     update(deltaTime: number) {

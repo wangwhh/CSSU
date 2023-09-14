@@ -22,6 +22,8 @@ export class hrdController extends Component {
             this.cur_pics = this.getRandomData();
         }while(!this.hasEvenInversions(this.cur_pics));
         this.adjustPos();
+        director.preloadScene('maze');
+        director.preloadScene('dialog3');
     }
 
     update(deltaTime: number) {

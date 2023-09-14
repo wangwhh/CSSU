@@ -1,4 +1,4 @@
-System.register(["./application.js"], function (_export, _context) {
+System.register(["https://wangwhh.github.io/CSSU/build/web-mobile/application.js"], function (_export, _context) {
   "use strict";
 
   var Application, canvas, $p, bcr, application;
